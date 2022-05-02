@@ -1,15 +1,18 @@
-from asyncio.windows_events import NULL
+import requests
 from django.shortcuts import get_object_or_404
+from rest_framework import status
+from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from .constant import MESSAGE, URL
 from .models import Question
 from .serializers import QuestionSerializer
-from rest_framework.response import Response
-from rest_framework import status
-from .constant import URL, MESSAGE
-import requests
 
 
 class APIRequestQuestion(APIView):
+    """Sending a request to the API service
+    and saving the response in the database.
+    """
     def post(self, request):
         try:
             questions_num = request.data['questions_num']
