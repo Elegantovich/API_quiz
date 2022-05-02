@@ -31,7 +31,7 @@ docker-compose up -d --build
 ```
 Накатите миграции:
 ```
-docker-compose exec yamdb python manage.py migrate
+docker-compose exec web python manage.py migrate
 ```
 Отправьте POST запрос по адресу http://127.0.0.1:8000/api/question/ с телом == кол-ву запросов к вышеуказанному [API сервису](https://jservice.io/api/random?count=1):
 ```
