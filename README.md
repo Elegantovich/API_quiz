@@ -27,7 +27,7 @@ DJANGO_KEY='your_key'
 ```
 Запустите docker-compose командой:
 ```
-docker-compose up -d
+docker-compose up -d --build
 ```
 Накатите миграции:
 ```
