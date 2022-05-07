@@ -10,7 +10,8 @@ from .serializers import QuestionSerializer
 
 
 class APIRequestQuestion(APIView):
-    """Sending a request to the API service
+    """
+    Sending a request to the API service
     and saving the response in the database.
     """
     def post(self, request):
