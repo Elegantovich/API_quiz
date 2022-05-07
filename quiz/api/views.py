@@ -33,7 +33,6 @@ class APIRequestQuestion(APIView):
             serializer = QuestionSerializer(data=data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
-            print(ID_question, response_text, question_text, date_request)
         previous_item_id = Question.objects.last().id - 1
         if not Question.objects.filter(id=previous_item_id).exists():
             response = {'question_text': None}
